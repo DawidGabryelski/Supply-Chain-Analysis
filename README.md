@@ -53,5 +53,8 @@ Based on the performed SQL analysis, key performance indicators of logistics par
 The analysis revealed significant differences in the service quality provided by partners, with On-Time Delivery (OTD) serving as the primary differentiator.
 
 1. Overall System Reliability: The overall OTD rate across all shipments was 0.70. This means that 0.30  of shipments arrived after the expected due date.
-2. Key Players and Bottlenecks: The ranking of logistics partners (derived from the logistic_partner_delivery_stats CTE) showed that the partners had similar score of the OTD rate between 0.67 and 0.73. 
+2. Key Players and Bottlenecks: The ranking of logistics partners (derived from the logistic_partner_delivery_stats CTE) showed that the partners had similar score of the OTD rate between 0.67 and 0.73.
+
+<img width="1111" height="140" alt="Zrzut ekranu 2025-11-27 180939" src="https://github.com/user-attachments/assets/15c7f0d1-79e3-4101-8cc5-97a310290574" />
+
 

@@ -57,4 +57,20 @@ The analysis revealed significant differences in the service quality provided by
 
 <img width="1111" height="140" alt="Zrzut ekranu 2025-11-27 180939" src="https://github.com/user-attachments/assets/15c7f0d1-79e3-4101-8cc5-97a310290574" />
 
+#### Impact of External Factors (Phase III)
+
+The analysis of weather influence on shipment status (Query 2) provided critical insights into the vulnerability of logistics operations to environmental conditions.
+
+1. Weather condition have no impact on the number of delayed shipment. Statistics are similar for each logistics partner.
+
+<img width="851" height="343" alt="Zrzut ekranu 2025-11-27 210756" src="https://github.com/user-attachments/assets/2de37203-a0e7-4dae-b6ef-102d246699b0" />
+
+#### Temporal Trends in Order Volume (Phase IV)
+
+The time-series analysis (Query 3) highlighted patterns in order volume that are essential for demand forecasting and resource allocation.
+
+1.Peaks/Seasonality: The highest volumes of orders and shipments were found to occur during the first and second quarter of the year. These volume peaks may correspond to seasonal high points (e.g., sales, holidays) and should be factored into strategic logistics resource planning.
+
+<img width="957" height="503" alt="Zrzut ekranu 2025-11-27 211834" src="https://github.com/user-attachments/assets/83c24dfa-3b4d-4821-8206-469c1a1fa2fd" />
+
 

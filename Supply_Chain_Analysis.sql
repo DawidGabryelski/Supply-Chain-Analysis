@@ -1,5 +1,3 @@
-select * from supply_chain sc;
-
 with 
 timeliness_analysis as(
 -- Calculating key time metrics for all shipments to assess punctuality.
@@ -65,14 +63,14 @@ logistic_partner_delivery_stats as(
 		a1.number_of_all_delivery,
 		d1.number_of_in_time_delivery,
 		d2.number_of_delyed_delivery,
-		round((d1.number_of_in_time_delivery/a1.number_of_all_delivery),2) as percent_of_in_time_delivery
+		round((d1.number_of_in_time_delivery/a1.number_of_all_delivery),2) as OTD
 	from all_delivery_by_operator a1
 	left join delivered_by_operator d1 on a1.logistics_partner = d1.logistics_partner
 	left join delayed_by_operator d2 on a1.logistics_partner  = d2.logistics_partner)
 select
 	-- Main Query: Comprehensive performance comparison of logistics partners.
 	lp.logistics_partner,
-	lp.percent_of_in_time_delivery,
+	lp.OTD,
 	-- Calculating the average supplier rating associated with this partner's shipments.
 	round(avg(sc.supplier_rating),2) as average_rating,
 	-- Calculating the average delay time in days (positive value means delay, negative means early).
@@ -83,13 +81,14 @@ left join timeliness_analysis ta on ta.logistics_partner  = lp.logistics_partner
 group by 1,2;
 
 
+
 select
 	-- Analysis of shipment status and volume grouped by logistics partner and weather condition.
 	sc.logistics_partner,
 	sc.shipment_status, 
 	sc.weather_condition, 
 	count(*) as shipment_count
-from supply_chain sc 
+from supply_chain sc
 group by 1,2,3;
 
 select
